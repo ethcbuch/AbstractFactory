@@ -1,4 +1,9 @@
-﻿namespace AbstractFactory
+﻿//Ethan Buchanan
+//2-3-23
+//CSCI352
+//IPhoneFactory interfacer with the phones of each company being created
+
+namespace AbstractFactory
 {
     public interface IPhoneFactory
     {
@@ -10,36 +15,41 @@
     {
         public ISmart getSmart()
         {
-            return null;
+            GalaxyS2 aGalaxyS2 = new GalaxyS2();
+            return aGalaxyS2;
         }
         public IDumb GetDumb()
         {
-            return null;
+            Genio aGenio = new Genio();
+            return aGenio;
         }
-
-        class HTCFactory : IPhoneFactory
+    }
+    class HTCFactory : IPhoneFactory
+    {
+        public ISmart getSmart()
         {
-            public ISmart getSmart()
-            {
-                return null;
-            }
-            public IDumb GetDumb()
-            {
-                return null;
-            }
+            Titan aTitan = new Titan();
+            return aTitan;
         }
-
-        class NokiaFactory : IPhoneFactory
+        public IDumb GetDumb()
         {
-            public ISmart getSmart()
-            {
-                return null;
-            }
-            public IDumb GetDumb()
-            {
-                return null;
-            }
+            Primo aPrimo = new Primo();
+            return aPrimo;
         }
     }
 
+    class NokiaFactory : IPhoneFactory
+    {
+        public ISmart getSmart()
+        {
+            Lumia aLumia = new Lumia();
+            return aLumia;
+        }
+        public IDumb GetDumb()
+        {
+            Asha aAsha = new Asha();
+            return aAsha;
+        }
+    }
 }
+

@@ -1,4 +1,8 @@
-﻿namespace AbstractFactory
+﻿//Ethan Buchanan
+//2-3-23
+//CSCI352
+//Implements the ISmart interface with the smart phones for each company
+namespace AbstractFactory
 {
     public interface ISmart
     {
@@ -9,21 +13,21 @@
     {
         public string getName()
         {
-            return null;
+            return "Lumia";
         }    
     }
     class GalaxyS2 : ISmart
     {
         public string getName()
         {
-            return null;
+            return "GalaxyS2";
         }
     }
     class Titan : ISmart
     {
         public string getName()
         {
-            return null;
+            return "Titan";
         }
     }
 }
